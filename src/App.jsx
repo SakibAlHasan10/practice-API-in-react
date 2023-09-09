@@ -8,7 +8,8 @@ function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1 className='text-5xl color-red-400'>hello</h1>
+      <p className='bg-green-500'>hello</p>
       
       
     </>
