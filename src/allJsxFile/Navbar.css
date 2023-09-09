@@ -1,0 +1,11 @@
+.navbar{
+    max-width: 1450px;
+    padding:auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: blue;
+}
+.navLogo{
+    font-size: 3rem;
+    color: white;
+}
