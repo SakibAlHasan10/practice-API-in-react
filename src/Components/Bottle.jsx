@@ -1,6 +1,8 @@
 import './Bottle.css'
+import '../../public/LocalStorege'
 const Bottle = ({bottle, setShopCard}) => {
     // console.log(setCard)
+
     return (
         <div className='card'>
             <img src={bottle.img} className='card-img mb-3' alt=""  />

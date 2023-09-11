@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Bottle from "./Bottle";
 import './bottles.css'
-import CartAdd from "./CartAdd";
+import { saveToCard } from "../../public/LocalStorege";
+
+
 
 
 const Bottles = () => {
@@ -16,6 +18,8 @@ const Bottles = () => {
     const setShopCard = (bottle) =>{
         const shopCard = [...card, bottle]
         setCard(shopCard)
+        saveToCard(bottle.id)
+        
     }
     return (
         <div>
