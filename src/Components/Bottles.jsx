@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Bottle from "./Bottle";
 import './bottles.css'
+import CartAdd from "./CartAdd";
 
 
 const Bottles = () => {
@@ -11,13 +12,20 @@ const Bottles = () => {
         .then(Response => Response.json())
         .then(data => setBottles(data))
     },[])
+    const [card, setCard] = useState([])
+    const setShopCard = (bottle) =>{
+        const shopCard = [...card, bottle]
+        setCard(shopCard)
+    }
     return (
         <div>
-            <h3 className=" font-semibold">Bottle:</h3>
+            <h3 className=" font-semibold text-xl">Bottle: {bottles.length}</h3>
+            <p className="text-center text-lg">Add Card: {card.length}</p>
             <div className="card-container">
                 {
                     bottles.map(bottle => <Bottle key={bottle.id} 
                         bottle={bottle}
+                        setShopCard={setShopCard}
                         ></Bottle>)
                 }
             
