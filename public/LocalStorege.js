@@ -8,7 +8,7 @@ const getToCard = () =>{
 
 const satToCard = (card) =>{
     const saveString = JSON.stringify(card)
-    const saveParse = localStorage.setItem('card', saveString)
+    localStorage.setItem('card', saveString)
 
 }
 
@@ -19,4 +19,4 @@ const card = getToCard()
     satToCard(card)
 }
 
-export {saveToCard}
+export {saveToCard, getToCard}

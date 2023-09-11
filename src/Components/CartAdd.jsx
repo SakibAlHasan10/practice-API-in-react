@@ -2,7 +2,7 @@
 const CartAdd = () => {
     return (
         <div>
-            10
+            
         </div>
     );
 };
