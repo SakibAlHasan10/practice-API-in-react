@@ -3,6 +3,7 @@ import { useState } from "react";
 import Bottle from "./Bottle";
 import './bottles.css'
 import { getToCard, saveToCard } from "../../public/LocalStorege";
+import Card from "./card/Card";
 
 
 
@@ -26,11 +27,11 @@ const Bottles = () => {
                 setArray.push(bottle)
             }
         }
-        // console.log(LcCard, bottles)
         setCard(setArray)
+        // console.log(card)
         }
     },[bottles])
-    
+
     const setShopCard = (bottle) =>{
         const shopCard = [...card, bottle]
         setCard(shopCard)
@@ -40,7 +41,7 @@ const Bottles = () => {
     return (
         <div>
             <h3 className=" font-semibold text-xl">Bottle: {bottles.length}</h3>
-            <p className="text-center text-lg">Add Card: {card.length}</p>
+            <Card card={card}></Card>
             <div className="card-container">
                 {
                     bottles.map(bottle => <Bottle key={bottle.id} 
